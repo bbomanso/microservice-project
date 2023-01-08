@@ -29,7 +29,7 @@ public class ProductService {
                 .build();
 
         repository.save(product);
-        log.info("Product Service --> Product {} is saved.", product.getId());
+        log.info("Product Service --> Product {} is saved to the database.", product.getId());
     }
 
     public List<ProductResponse> getAllProducts() {
