@@ -1,12 +1,10 @@
 package com.beatr.inventoryservice.repository;
 
-import java.util.Optional;
-
+import com.beatr.inventoryservice.entity.Inventory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.beatr.inventoryservice.entity.Inventory;
+import java.util.List;
 
 public interface InventoryRepository extends JpaRepository<Inventory, Long> {
-
-    Optional<Inventory> findBySkuCode();
+    List<Inventory> findBySkuCodeIn(List<String> skuCode);
 }
